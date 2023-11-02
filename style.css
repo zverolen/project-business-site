@@ -1,97 +1,119 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@layer reset, tokens, general, specific, states, theme.light, theme.dark, overrides;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@import url("./reset.css") layer(reset);
+@import url("./tokens.css") layer(tokens);
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+@layer overrides {
+  /* Visually hidden elements are visible to screen readers */
+  .visually-hidden {
+    clip-path: inset(100%);
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+  @layer theme.light {
+    :root {
+      --site-text-color: var(--colorPrimary);
+      --site-background-color: var(--colorSecondary);
+
+      --header-text-color: var(--colorPrimaryInverted);
+      --header-background-color: var(--colorSecondaryInverted);
+
+      --default-card-background-color: var(--colorTertiary);
+      --accent-card-background-color: var(--colorAccent);
+
+      --footer-text-color: var(--colorAccent);
+    }
   }
-  a:hover {
-    color: #747bff;
+}
+
+@media (prefers-color-scheme: dark) {
+  @layer theme.dark {
+    :root {
+      --text-color: var(--colorPrimaryInverted);
+      --background-color: var(--colorPrimary);
+      --disabled-background-color: var(--colorDisabledDark);
+      --disabled-text-color: var(--colorDisabledMedium);
+
+      --correct-text-color: var(--colorSuccessDarkTheme);
+      --correct-background-color: var(--background-color);
+      --wrong-text-color: var(--colorErrorDarkTheme);
+      --wrong-background-color: var(--background-color);
+    }
   }
-  button {
-    background-color: #f9f9f9;
+}
+
+@layer general {
+  body {
+    font-family: var(--text-font-family);
+    font-size: var(--text-font-size);
+
+    color: var(--site-text-color);
+    background-color: var(--site-background-color);
+  }
+
+  section:not(:first-of-type):not(:nth-of-type(3)) {
+    width: var(--content-width);
+    margin-inline: var(--content-margin);
+  }
+
+  header {
+    padding-block: var(--header-padding);
+
+    font-size: var(--header-font-size);
+
+    color: var(--header-text-color);
+    background-color: var(--header-background-color);
+  }
+
+  header > div {
+    display: var(--header-layout);
+    justify-content: var(--header-justify-content);
+    align-items: var(--header-align-items);
+
+    width: var(--content-width);
+    margin-inline: var(--content-margin);
+  }
+
+  header img {
+    width: var(--logo-width);
+  }
+
+  nav {
+    display: var(--nav-layout);
+    gap: var(--nav-gap);
+  }
+
+  #beers li {
+    background-color: var(--default-card-background-color);
+  }
+
+  #contact {
+    background-color: var(--default-card-background-color);
+  }
+
+  #contact > div {
+    width: var(--content-width);
+    margin-inline: var(--content-margin);
+  }
+
+  #events li {
+    background-color: var(--accent-card-background-color);
+  }
+
+  footer {
+    color: var(--footer-text-color);
+    background-color: var(--header-background-color);
+  }
+
+  footer > div {
+    width: var(--content-width);
+    margin-inline: var(--content-margin);
   }
 }

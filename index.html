@@ -8,20 +8,18 @@
   </head>
   <body>
     <div id="app">
-      <header class="header">
+      <header>
         <div class="header-content">
-          <div class="logo-container">
-            <img src="./images/logo/logo.png" alt="Logo of the O2 brewery">            
-          </div>
-          <nav class="header-menu">
-              <a class="header-menuLink" href="#beers">Beers</a>
-              <a class="header-menuLink" href="#contact">Contact</a>
-              <a class="header-menuLink" href="#events">Experience</a>
-              <a class="header-menuLink" href="#credits">Credits</a>
+          <img src="./images/logo/logo.png" alt="Logo of the O2 brewery">            
+          <nav>
+              <a href="#beers">Beers</a>
+              <a href="#contact">Contact</a>
+              <a href="#events">Experience</a>
+              <a href="#credits">Credits</a>
           </nav>
         </div>
       </header>
-      <main class="site-content">
+      <main>
         <h1 class="visually-hidden">O2 is alco-free craft beer</h1>
         <section class="heroImage" id="home">
           <div class="illustration-container">
@@ -58,8 +56,8 @@
         </section>
   
         <section class="beers-section" id="beers">
-          <h2 class="section-heading">Our beers</h2>
-          <ul class="beers-container">
+          <h2>Our beers</h2>
+          <ul class="beers-container" role="list">
   
             <!-- One beer -->
             <li class="beers-card">
@@ -322,34 +320,32 @@
         <section class="contacts-section" id="contact">
           <h2 class="visually-hidden">About us and contacts</h2>
           <p aria-hidden="true" class="section-heading">Meet Our Team and Get in Touch</p>
-          <div class="contacts-content">
-            <div class="illustration-container">
-              <img
-                  class="illustration-item"
-                  sizes="
-                  (max-width: 1600px) 100vw,
-                  1600px"
-                  srcset="
-                  ./images/crew/crew_lfs1ts_c_scale,w_320.jpg 320w,
-                  ./images/crew/crew_lfs1ts_c_scale,w_861.jpg 861w,
-                  ./images/crew/crew_lfs1ts_c_scale,w_1187.jpg 1187w,
-                  ./images/crew/crew_lfs1ts_c_scale,w_1451.jpg 1451w,
-                  ./images/crew/crew_lfs1ts_c_scale,w_1703.jpg 1703w,
-                  ./images/crew/crew_lfs1ts_c_scale,w_1958.jpg 1958w,
-                  ./images/crew/crew_lfs1ts_c_scale,w_2166.jpg 2166w,
-                  ./images/crew/crew_lfs1ts_c_scale,w_2364.jpg 2364w,
-                  ./images/crew/crew_lfs1ts_c_scale,w_2539.jpg 2539w,
-                  ./images/crew/crew_lfs1ts_c_scale,w_2706.jpg 2706w,
-                  ./images/crew/crew_lfs1ts_c_scale,w_2873.jpg 2873w,
-                  ./images/crew/crew_lfs1ts_c_scale,w_3013.jpg 3013w,
-                  ./images/crew/crew_lfs1ts_c_scale,w_3129.jpg 3129w,
-                  ./images/crew/crew_lfs1ts_c_scale,w_3197.jpg 3197w,
-                  ./images/crew/crew_lfs1ts_c_scale,w_3199.jpg 3199w,
-                  ./images/crew/crew_lfs1ts_c_scale,w_3200.jpg 3200w"
-                  src="./images/crew/crew_lfs1ts_c_scale,w_320.jpg"
-                  alt="Jack, Kate, Muhammad and Joshi are dancing in the sunshine"
-                >
-            </div>
+          
+          <img
+              class="illustration-item"
+              sizes="
+              (max-width: 1600px) 100vw,
+              1600px"
+              srcset="
+              ./images/crew/crew_lfs1ts_c_scale,w_320.jpg 320w,
+              ./images/crew/crew_lfs1ts_c_scale,w_861.jpg 861w,
+              ./images/crew/crew_lfs1ts_c_scale,w_1187.jpg 1187w,
+              ./images/crew/crew_lfs1ts_c_scale,w_1451.jpg 1451w,
+              ./images/crew/crew_lfs1ts_c_scale,w_1703.jpg 1703w,
+              ./images/crew/crew_lfs1ts_c_scale,w_1958.jpg 1958w,
+              ./images/crew/crew_lfs1ts_c_scale,w_2166.jpg 2166w,
+              ./images/crew/crew_lfs1ts_c_scale,w_2364.jpg 2364w,
+              ./images/crew/crew_lfs1ts_c_scale,w_2539.jpg 2539w,
+              ./images/crew/crew_lfs1ts_c_scale,w_2706.jpg 2706w,
+              ./images/crew/crew_lfs1ts_c_scale,w_2873.jpg 2873w,
+              ./images/crew/crew_lfs1ts_c_scale,w_3013.jpg 3013w,
+              ./images/crew/crew_lfs1ts_c_scale,w_3129.jpg 3129w,
+              ./images/crew/crew_lfs1ts_c_scale,w_3197.jpg 3197w,
+              ./images/crew/crew_lfs1ts_c_scale,w_3199.jpg 3199w,
+              ./images/crew/crew_lfs1ts_c_scale,w_3200.jpg 3200w"
+              src="./images/crew/crew_lfs1ts_c_scale,w_320.jpg"
+              alt="Jack, Kate, Muhammad and Joshi are dancing in the sunshine"
+            >
             <div class="contacts-container">
               <h3 class="visually-hidden">Contact us</h3>
               <div class="contacts-group">
@@ -371,13 +367,12 @@
                 <a href="tel:+15032222222">Phone: 1(503)222-2222</a>
               </div>
             </div>
-          </div>
         </section>
   
         <!-- Events List -->
         <section id="events" class="events-section">
           <h2 class="section-heading">Find Us on an Upcoming Event!</h2>
-          <ul class="event-container">
+          <ul class="event-container" role="list">
   
             <!-- Single Event -->
             <li class="event-card">
@@ -405,7 +400,7 @@
                   </div>
                   <p class="event-description">A street racer open cup. Speed, adrenaline and all kinds of joy. Proud to be partners.</p>
                 </div>
-                <a class="event-link" href="#">Link to the race</a>
+                <a href="#">Link to the race</a>
               </div>        
             </li>
   
@@ -436,7 +431,7 @@
                   </div>
                   <p class="event-description">We will discuss the principles of separate waste collection and eco-volunteering. Foods and drinks.</p>
                 </div>
-                <a class="event-link" href="#">Link to the meet-up website</a>
+                <a href="#">Link to the meet-up website</a>
               </div>        
             </li>
   
@@ -467,7 +462,7 @@
                   </div>
                   <p class="event-description">Medieval enthusiasts put on armor and re-live moments of the past.</p>
                 </div>
-                <a class="event-link" href="#">Link the historical event website</a>
+                <a href="#">Link the historical event website</a>
               </div>        
             </li>
   

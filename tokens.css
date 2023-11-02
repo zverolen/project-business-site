@@ -1,0 +1,85 @@
+:root {
+  /* Colors | Primitive */
+  --black: #393c36;
+  --beige: #F6F0E9;
+  --green: #b9c0b1;
+  --white: #ffffff;
+
+  /* Fonts | Primitive */
+  --sans-I: 'Trebuchet MS';
+  --sans-II: Verdana;
+  --sans-III: Arial;
+  --sans-IV: Tahoma;
+  --serif-I: Georgia;
+  --serif-II: 'Times New Roman';
+
+  --textSizeMin: 1rem;
+  --textSizeMax: calc(18 / 16 * 1rem);
+  --textSizeIdeal: 3.2vw;
+
+  --headerSizeMin: min(5vw, 1rem);
+  --headerSizeMax: calc(18 / 16 * 1rem);
+  --headerSizeIdeal: 2.7vw;
+
+  --fontWeightMin: 400;
+  --fontWeightMax: 600;
+
+  --lineHeightBig: 1.3;
+  --lineHeightSmall: 1.1;
+  --lineHeightSmallLargeFont: 0.9;
+  --lineHeightReset: normal;
+
+  /* Sizing | Primitive */
+  --gap-I: calc(8 / 16 * 1rem);
+  --gap-II: 1rem;
+  --gap-III: calc(24 / 16 * 1rem);
+  --gap-IV: calc(32 /  16 * 1rem);
+  --gap-V: calc(48 / 16 * 1rem);
+
+  --contentWidthMin: 1280 / 16 * 1rem;
+  --contentWidthMax: 100vw - 2rem;
+
+  --logoWidthMin: min(100%, 250 / 16 * 1rem);
+  --logoWidthMax: 75vw;
+  --logoWidthIdeal: min(40vw, 360 / 16 * 1rem);
+
+  --navGapMin: 1rem;
+  --navGapMax: 1.5873015873vw;
+  --navGapIdeal: calc(24 / 16 * 1rem);
+
+  /* Layout | Primitive */
+  --centeringMargin: auto;
+
+  /* Colors | Semantic */
+  --colorPrimary: var(--black);
+  --colorSecondary: var(--beige);
+  --colorPrimaryInverted: var(--colorSecondary);
+  --colorSecondaryInverted: var(--colorPrimary);
+  --colorTertiary: var(--white);
+  --colorAccent: var(--green);
+
+  /* Fonts | Semantic */
+  --text-font-family: var(--sans-I), var(--sans-II), var(--sans-III), var(--sans-IV), sans-serif;
+  --heading-font-family: var(--serif-I), var(--serif-II), serif;
+
+  --text-font-size: clamp(var(--textSizeMin), var(--textSizeIdeal), var(--textSizeMax));
+  --header-font-size: clamp(var(--headerSizeMin), var(--headerSizeIdeal), var(--headerSizeMax));
+
+  /* Sizing | Semantic */
+  --content-width: min(var(--contentWidthMin), var(--contentWidthMax));
+
+  --header-padding: var(--nav-gap);
+
+  --logo-width: clamp(var(--logoWidthMin), var(--logoWidthIdeal), var(--logoWidthMax));
+
+  --nav-gap: clamp(var(--navGapMin), var(--navGapIdeal), var(--navGapMax));
+
+  /* Layout | Semantic */
+  --content-margin: var(--centeringMargin);
+
+  --header-layout: flex;
+  --header-justify-content: space-between;
+  --header-align-items: center;
+
+  --nav-layout: flex;
+}
