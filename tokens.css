@@ -3,7 +3,7 @@
   --black: #393c36;
   --beige: #F6F0E9;
   --green: #b9c0b1;
-  --white: #ffffff;
+  --white: #FFFFFF;
 
   /* Fonts | Primitive */
   --sans-I: 'Trebuchet MS';
@@ -21,6 +21,10 @@
   --headerSizeMax: calc(18 / 16 * 1rem);
   --headerSizeIdeal: 2.7vw;
 
+  --headingSizeMin: calc(24 / 16 * 1rem);
+  --headingSizeMax: calc(52 / 16 * 1rem);
+  --headingSizeIdeal: 5.7777777778vw;
+
   --fontWeightMin: 400;
   --fontWeightMax: 600;
 
@@ -30,6 +34,9 @@
   --lineHeightReset: normal;
 
   /* Sizing | Primitive */
+  --outlineOnFocus: calc(6 / 16 * 1rem);
+  --shadowOnFocus: calc(8 / 16 * 1rem);
+
   --gap-I: calc(8 / 16 * 1rem);
   --gap-II: 1rem;
   --gap-III: calc(24 / 16 * 1rem);
@@ -46,6 +53,10 @@
   --navGapMin: 1rem;
   --navGapMax: 1.5873015873vw;
   --navGapIdeal: calc(24 / 16 * 1rem);
+
+  --headingWidth: 90%;
+  --headingMarginMin: 3.25rem;
+  --headingMarginMax: 5.7777777778vw;
 
   /* Layout | Primitive */
   --centeringMargin: auto;
@@ -64,6 +75,10 @@
 
   --text-font-size: clamp(var(--textSizeMin), var(--textSizeIdeal), var(--textSizeMax));
   --header-font-size: clamp(var(--headerSizeMin), var(--headerSizeIdeal), var(--headerSizeMax));
+  --subheading-font-size: var(--text-font-size);
+
+  --heading-text-transform: uppercase;
+  --heading-font-size: clamp(var(--headingSizeMin), var(--headingSizeIdeal), var(--headingSizeMax));
 
   /* Sizing | Semantic */
   --content-width: min(var(--contentWidthMin), var(--contentWidthMax));
@@ -74,6 +89,10 @@
 
   --nav-gap: clamp(var(--navGapMin), var(--navGapIdeal), var(--navGapMax));
 
+  --heading-width: var(--headingWidth);
+  --heading-margin-block: min(var( --headingMarginMin), var(--headingMarginMax));
+  --heading-margin-inline: var(--centeringMargin);
+
   /* Layout | Semantic */
   --content-margin: var(--centeringMargin);
 
@@ -82,4 +101,7 @@
   --header-align-items: center;
 
   --nav-layout: flex;
+
+  /* Cursor | Semantic */
+  --link-cursor: pointer;
 }
