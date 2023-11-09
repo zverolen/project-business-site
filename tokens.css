@@ -58,6 +58,9 @@
   --headingMarginMin: 3.25rem;
   --headingMarginMax: 5.7777777778vw;
 
+  --beerDescriptionGapMin: calc(8 / 16 * 1rem);
+  --beerDescriptionGapMax: 0.8888888889vw;
+
   /* Layout | Primitive */
   --centeringMargin: auto;
 
@@ -93,6 +96,11 @@
   --heading-margin-block: min(var( --headingMarginMin), var(--headingMarginMax));
   --heading-margin-inline: var(--centeringMargin);
 
+  --beer-card-gap: var(--gap-II);
+  --beer-card-padding: var(--gap-II);
+  --beer-description-gap: min(var(--beerDescriptionGapMin), var(--beerDescriptionGapMax));
+  --beer-details-gap: var(--beer-description-gap);
+
   /* Layout | Semantic */
   --content-margin: var(--centeringMargin);
 
@@ -101,6 +109,14 @@
   --header-align-items: center;
 
   --nav-layout: flex;
+
+  --beer-card-layout: flex;
+  --beer-card-container-type: inline-size;
+  --beer-description-layout: flex;
+  --beer-description-direction: column;
+  --beer-description-flex: 2 1 0;
+  --beer-details-layout: flex;
+  --beers-details-directiond: column;
 
   /* Cursor | Semantic */
   --link-cursor: pointer;

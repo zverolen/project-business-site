@@ -53,6 +53,11 @@
   body {
     font-family: var(--text-font-family);
     font-size: var(--text-font-size);
+    line-height: 1.4;
+    letter-spacing: 0.012em;
+    word-spacing: 0.016em;
+    overflow-wrap: break-word;
+    hyphens: auto;
 
     color: var(--site-text-color);
     background-color: var(--site-background-color);
@@ -106,32 +111,67 @@
     gap: var(--nav-gap);
   }
 
-  #beers li {
-    background-color: var(--default-card-background-color);
-  }
-
   #beers ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 15.75rem), 1fr));
     gap: clamp(1rem, 1.5873015873vw, 1.5rem);
   }
 
-  #contact {
+  #beers li {
+    container-type: var(--beer-card-container-type);
+
+    display: var(--beer-card-layout);
+    gap: var(--beer-card-gap);
+
+    padding: var(--beer-card-padding);
+
     background-color: var(--default-card-background-color);
+  }
+
+  #beers li > div:first-child {
+    display: var(--beer-description-layout);
+    flex-direction: var(--beer-description-direction);
+    flex: var(--beer-description-flex);
+    gap: var(--beer-description-gap);
+  }
+
+  @container (max-width: 300px) {
+    #beers li > div:first-child {
+      font-size: 1rem;
+    }
+  }
+
+  #beers li > div:last-child {
+    flex: 1 1 0;
+  }
+
+  #beers li > div:first-child > div {
+    display: var(--beer-details-layout);
+    flex-direction: var(--beers-details-directiond);
+    gap: var(--beer-details-gap);
   }
 
   #contact > div {
     width: var(--content-width);
     margin-inline: var(--content-margin);
+    background-color: var(--default-card-background-color);
   }
 
   #events ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 15.75rem), 1fr));
+    gap: 1rem;
   }
 
   #events li {
+    container: event-card/inline-size;
     background-color: var(--accent-card-background-color);
+  }
+
+  @container event-card (max-width: 300px) {
+    #events li > div {
+      font-size: 1rem;
+    }
   }
 
   footer {
