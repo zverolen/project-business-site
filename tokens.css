@@ -46,11 +46,11 @@
   --contentWidthMin: 1280 / 16 * 1rem;
   --contentWidthMax: 100vw - 2rem;
 
-  --logoWidthMin: min(100%, 250 / 16 * 1rem);
+  --logoWidthMin: min(100%, 180 / 16 * 1rem);
   --logoWidthMax: 75vw;
   --logoWidthIdeal: min(40vw, 360 / 16 * 1rem);
 
-  --navGapMin: 1rem;
+  --navGapMin: var(--gap-I);
   --navGapMax: 1.5873015873vw;
   --navGapIdeal: calc(24 / 16 * 1rem);
 
@@ -86,7 +86,7 @@
   /* Sizing | Semantic */
   --content-width: min(var(--contentWidthMin), var(--contentWidthMax));
 
-  --header-padding: var(--nav-gap);
+  --header-padding: var(--gap-II);
 
   --logo-width: clamp(var(--logoWidthMin), var(--logoWidthIdeal), var(--logoWidthMax));
 
