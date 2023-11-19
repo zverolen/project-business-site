@@ -53,11 +53,11 @@
   body {
     font-family: var(--text-font-family);
     font-size: var(--text-font-size);
-    line-height: 1.4;
-    letter-spacing: 0.012em;
-    word-spacing: 0.016em;
-    overflow-wrap: break-word;
-    hyphens: auto;
+    line-height: var(--text-line-height);
+    letter-spacing: var(--text-letter-spacing);
+    /* word-spacing: 0.016em; */
+    overflow-wrap: var(--text-overflow-wrap);
+    hyphens: var(--text-hyphens);
 
     color: var(--site-text-color);
     background-color: var(--site-background-color);
@@ -68,12 +68,10 @@
   }
 
   h2:not(footer h2) {
-    /* width: var(--heading-width); */
     margin-block:var(--heading-margin-block);
-    /* margin-inline: var(--heading-margin-inline); */
 
     font-size: var(--heading-font-size);
-    text-align: center;
+    text-align: var(--heading-text-align);
   }
 
   h3, footer h2 {
@@ -96,14 +94,13 @@
     display: var(--header-layout);
     justify-content: var(--header-justify-content);
     align-items: var(--header-align-items);
-    column-gap: clamp(1rem, 1.5873015873vw, 1.5rem);
-    row-gap: clamp(1rem, 1.5873015873vw, 1.5rem);
+    column-gap: var(--header-column-gap);
+    row-gap: var(--header-row-gap);
+    flex-wrap: var(--header-wrap);
 
-    width: var(--content-width);
-    margin-inline: var(--content-margin);
+    width: var(--header-width);
+    margin-inline: var(--header-margin);
     padding-block: var(--header-padding);
-
-    flex-wrap: wrap;
   }
 
   header img {
@@ -116,9 +113,9 @@
   }
 
   #beers ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15.75rem), 1fr));
-    gap: clamp(1rem, 1.5873015873vw, 1.5rem);
+    display: var(--beers-layout);
+    grid-template-columns: var(--beers-columns);
+    gap: var(--beers-gap);
   }
 
   #beers li {
@@ -141,12 +138,12 @@
 
   @container (max-width: 300px) {
     #beers li > div:first-child {
-      font-size: 1rem;
+      font-size: var(--beer-description-smaller-font-size);
     }
   }
 
   #beers li > div:last-child {
-    flex: 1 1 0;
+    flex: var(--beer-illustration-flex);
   }
 
   #beers li > div:first-child > div {
@@ -160,34 +157,34 @@
   }
 
   #contact > div > div {
-    display: flex;
+    display: var(--contacts-layout);
     /* justify-content: space-between; */
-    justify-content: space-around;
-    flex-wrap: wrap;
-    column-gap: 16px;
-    row-gap: 32px;
+    justify-content: var(--contacts-justify-content);
+    flex-wrap: var(--contacts-flex-wrap);
+    column-gap: var(--contacts-column-gap);
+    row-gap: var(--contacts-row-gap);
 
-    width: var(--content-width);
-    margin-inline: var(--content-margin);
-    padding-block: 48px;
+    width: var(--contacts-width);
+    margin-inline: var(--contacts-margin);
+    padding-block: var(--contacts-padding);
   }
 
   #contact > div > div > div:nth-child(1) {
-    flex-basis: 100%;
+    flex-basis: var(--contacts-address-width);
 
-    text-align: center;
-  }
-
-  #contact > div > div > div:not(:nth-child(1)) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: var(--contacts-address-text-align);
   }
 
   #contact > div > div > div:nth-child(1) p {
     /* font-weight: var(--heading-font-weight); */
-    display: inline-block;
-    text-transform: var(--heading-text-transform);
+    display: var(--contacts-address-display);
+    text-transform: var(--contacts-address-text-transform);
+  }
+
+  #contact > div > div > div:not(:nth-child(1)) {
+    display: var(--contacts-phone-layout);
+    flex-direction: var(--contacts-phone-direction);
+    align-items: var(--contacts-phone-centering);
   }
 
   #events {
@@ -195,26 +192,27 @@
   }
 
   #events ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15.75rem), 1fr));
-    gap: 1rem;
+    display: var(--events-layout);
+    grid-template-columns: var(--events-columns);
+    gap: var(--events-gap);
   }
 
   #events li {
     container: event-card/inline-size;
 
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    padding: 16px;
-    align-content: flex-start;
+    display: var(--event-card-layout);
+    flex-wrap: var(--event-card-wrap);
+    align-content: var(--event-card-align-content);
+    gap: var(--event-card-gap);
 
+    padding: var(--event-card-padding);
+    
     background-color: var(--accent-card-background-color);  
   }
 
   @container event-card (max-width: 300px) {
     #events li > div {
-      font-size: 1rem;
+      font-size: var(--event-card-smaller-font-size);
     }
   }
 

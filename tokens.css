@@ -28,10 +28,13 @@
   --fontWeightMin: 400;
   --fontWeightMax: 600;
 
-  --lineHeightBig: 1.3;
+  --lineHeightBig: 1.4;
   --lineHeightSmall: 1.1;
   --lineHeightSmallLargeFont: 0.9;
   --lineHeightReset: normal;
+
+  --textLetterSpacing: 0.012em;
+  --textOverflowWrap: break-word;
 
   /* Sizing | Primitive */
   --outlineOnFocus: calc(6 / 16 * 1rem);
@@ -75,19 +78,35 @@
 
   /* Fonts | Semantic */
   --text-font-family: var(--sans-III), var(--sans-II), var(--sans-I), var(--sans-IV), sans-serif;
-
   --text-font-size: clamp(var(--textSizeMin), var(--textSizeIdeal), var(--textSizeMax));
+  --text-line-height: var(--lineHeightBig);
+  --text-letter-spacing: var(--textLetterSpacing);
+  --text-overflow-wrap: var(--textOverflowWrap);
+  --text-hyphens: auto;
+
   --header-font-size: clamp(var(--headerSizeMin), var(--headerSizeIdeal), var(--headerSizeMax));
   --subheading-font-size: var(--text-font-size);
 
   --heading-text-transform: uppercase;
   --heading-font-weight: var(--fontWeightMax);
   --heading-font-size: clamp(var(--headingSizeMin), var(--headingSizeIdeal), var(--headingSizeMax));
+  --heading-text-align: center;
+
+  --beer-description-smaller-font-size: var(--textSizeMin);
+
+  --contacts-address-text-align: center;
+  --contacts-address-text-transform: var(--heading-text-transform);
+
+  --event-card-smaller-font-size: var(--textSizeMin);
 
   /* Sizing | Semantic */
   --content-width: min(var(--contentWidthMin), var(--contentWidthMax));
 
+  --header-width: var(--content-width);
+  --header-margin: var(--content-margin);
   --header-padding: var(--gap-II);
+  --header-column-gap: clamp(1rem, 1.5873015873vw, 1.5rem);
+  --header-row-gap: clamp(1rem, 1.5873015873vw, 1.5rem);
 
   --logo-width: clamp(var(--logoWidthMin), var(--logoWidthIdeal), var(--logoWidthMax));
 
@@ -97,6 +116,9 @@
   --heading-margin-block: min(var(--siteGapMin), var(--siteGapMax));
   --heading-margin-inline: var(--centeringMargin);
 
+  --beers-columns: repeat(auto-fit, minmax(min(100%, 15.75rem), 1fr));
+  --beers-gap: clamp(1rem, 1.5873015873vw, 1.5rem);
+
   --beer-card-gap: var(--gap-II);
   --beer-card-padding: var(--gap-II);
   --beer-description-gap: min(var(--beerDescriptionGapMin), var(--beerDescriptionGapMax));
@@ -104,14 +126,31 @@
 
   --events-margin-block-end: calc(var(--heading-margin-block) * 1.5);
 
+  --contacts-column-gap: var(--gap-II);
+  --contacts-row-gap: var(--gap-IV);
+  --contacts-width: var(--content-width);
+  --contacts-margin: var(--content-margin);
+  --contacts-padding: var(--gap-V);
+
+  --contacts-address-width: 100%;
+
+  --events-columns: repeat(auto-fit, minmax(min(100%, 15.75rem), 1fr));
+  --events-gap: var(--gap-II);
+
+  --event-card-gap: var(--gap-III);
+  --event-card-padding: var(--gap-II);
+
   /* Layout | Semantic */
   --content-margin: var(--centeringMargin);
 
   --header-layout: flex;
   --header-justify-content: space-between;
   --header-align-items: center;
+  --header-wrap: wrap;
 
   --nav-layout: flex;
+
+  --beers-layout: grid;
 
   --beer-card-layout: flex;
   --beer-card-container-type: inline-size;
@@ -120,6 +159,22 @@
   --beer-description-flex: 2 1 0;
   --beer-details-layout: flex;
   --beers-details-directiond: column;
+  --beer-illustration-flex: 1 1 0;
+
+  --contacts-layout: flex;
+  --contacts-justify-content: space-around;
+  --contacts-flex-wrap: wrap;
+
+  --contacts-address-display: inline-block;
+  --contacts-phone-layout: flex;
+  --contacts-phone-direction: column;
+  --contacts-phone-centering: center;
+
+  --events-layout: grid;
+
+  --event-card-layout: flex;
+  --event-card-wrap: wrap;
+  --event-card-align-content: flex-start;
 
   /* Cursor | Semantic */
   --link-cursor: pointer;
