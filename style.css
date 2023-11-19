@@ -184,13 +184,9 @@
     align-items: center;
   }
 
-  #contact > div > div > div:nth-child(1) h4, 
-  #contact > div > div > div:nth-child(1) p {
-    display: inline-block;
-  }
-
   #contact > div > div > div:nth-child(1) p {
     /* font-weight: var(--heading-font-weight); */
+    display: inline-block;
     text-transform: var(--heading-text-transform);
   }
 
