@@ -37,6 +37,7 @@
   --outlineOnFocus: calc(6 / 16 * 1rem);
   --shadowOnFocus: calc(8 / 16 * 1rem);
 
+  --gap-0-I: calc(4 / 16 * 1rem);
   --gap-I: calc(8 / 16 * 1rem);
   --gap-II: 1rem;
   --gap-III: calc(24 / 16 * 1rem);
@@ -55,8 +56,8 @@
   --navGapIdeal: calc(24 / 16 * 1rem);
 
   --headingWidth: 90%;
-  --headingMarginMin: 3.25rem;
-  --headingMarginMax: 5.7777777778vw;
+  --siteGapMin: 3.25rem;
+  --siteGapMax: 5.7777777778vw;
 
   --beerDescriptionGapMin: calc(8 / 16 * 1rem);
   --beerDescriptionGapMax: 0.8888888889vw;
@@ -73,14 +74,14 @@
   --colorAccent: var(--green);
 
   /* Fonts | Semantic */
-  --text-font-family: var(--sans-I), var(--sans-II), var(--sans-III), var(--sans-IV), sans-serif;
-  --heading-font-family: var(--serif-I), var(--serif-II), serif;
+  --text-font-family: var(--sans-III), var(--sans-II), var(--sans-I), var(--sans-IV), sans-serif;
 
   --text-font-size: clamp(var(--textSizeMin), var(--textSizeIdeal), var(--textSizeMax));
   --header-font-size: clamp(var(--headerSizeMin), var(--headerSizeIdeal), var(--headerSizeMax));
   --subheading-font-size: var(--text-font-size);
 
   --heading-text-transform: uppercase;
+  --heading-font-weight: var(--fontWeightMax);
   --heading-font-size: clamp(var(--headingSizeMin), var(--headingSizeIdeal), var(--headingSizeMax));
 
   /* Sizing | Semantic */
@@ -93,13 +94,15 @@
   --nav-gap: clamp(var(--navGapMin), var(--navGapIdeal), var(--navGapMax));
 
   --heading-width: var(--headingWidth);
-  --heading-margin-block: min(var( --headingMarginMin), var(--headingMarginMax));
+  --heading-margin-block: min(var(--siteGapMin), var(--siteGapMax));
   --heading-margin-inline: var(--centeringMargin);
 
   --beer-card-gap: var(--gap-II);
   --beer-card-padding: var(--gap-II);
   --beer-description-gap: min(var(--beerDescriptionGapMin), var(--beerDescriptionGapMax));
-  --beer-details-gap: var(--beer-description-gap);
+  --beer-details-gap: var(--gap-0-I);
+
+  --events-margin-block-end: calc(var(--heading-margin-block) * 1.5);
 
   /* Layout | Semantic */
   --content-margin: var(--centeringMargin);
