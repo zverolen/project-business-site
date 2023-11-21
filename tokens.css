@@ -17,6 +17,9 @@
   --textSizeMax: calc(18 / 16 * 1rem);
   --textSizeIdeal: 3.2vw;
 
+  --fullWidth: 100%;
+  --fullHeight: 100%;
+
   --headerSizeMin: min(5vw, 1rem);
   --headerSizeMax: calc(18 / 16 * 1rem);
   --headerSizeIdeal: 2.7vw;
@@ -50,23 +53,38 @@
   --contentWidthMin: 1280 / 16 * 1rem;
   --contentWidthMax: 100vw - 2rem;
 
+  --headerGapMin: var(--gap-II);
+  --headerGapIdeal: 1.5873015873vw;
+  --headerGapMax: calc(24 / 16 * 1rem);
+
   --logoWidthMin: min(100%, 180 / 16 * 1rem);
   --logoWidthMax: 75vw;
   --logoWidthIdeal: min(40vw, 360 / 16 * 1rem);
 
   --navGapMin: var(--gap-I);
-  --navGapMax: 1.5873015873vw;
-  --navGapIdeal: calc(24 / 16 * 1rem);
+  --navGapIdeal: var(--headerGapIdeal);
+  --navGapMax: var(--headerGapMax);
+
+  --beerGapMin: var(--gap-II);
+  --beerGapIdeal: 1.5873015873vw;
+  --beerGapMax: calc(24 / 16 * 1rem);
 
   --headingWidth: 90%;
   --siteGapMin: 3.25rem;
   --siteGapMax: 5.7777777778vw;
 
+  --beerTrackWidth: calc(252 / 16 * 1rem);
+  --beersTrackSizeMin: min(var(--fullWidth), var(--beerTrackWidth));
+  --beersTrackSizeMax: 1fr;
   --beerDescriptionGapMin: calc(8 / 16 * 1rem);
   --beerDescriptionGapMax: 0.8888888889vw;
 
+  --eventImgWidth: calc(120 / 16 * 1rem);
+  --eventDescriptionWidth: calc(200 / 16 * 1rem);
+
   /* Layout | Primitive */
   --centeringMargin: auto;
+  --beersTrackCount: auto-fit;
 
   /* Colors | Semantic */
   --colorPrimary: var(--black);
@@ -98,6 +116,12 @@
   --contacts-address-text-transform: var(--heading-text-transform);
 
   --event-card-smaller-font-size: var(--textSizeMin);
+  --event-card-date-font-style: italic;
+  --event-card-margin: var(--gap-I);
+
+  --footer-padding: var(--gap-III) var(--gap-III);
+  --footer-heading-margin: var(--gap-I);
+  --footer-link-margin: var(--gap-I);
 
   /* Sizing | Semantic */
   --content-width: min(var(--contentWidthMin), var(--contentWidthMax));
@@ -105,8 +129,7 @@
   --header-width: var(--content-width);
   --header-margin: var(--content-margin);
   --header-padding: var(--gap-II);
-  --header-column-gap: clamp(1rem, 1.5873015873vw, 1.5rem);
-  --header-row-gap: clamp(1rem, 1.5873015873vw, 1.5rem);
+  --header-gap: clamp(var(--headerGapMin), var(--headerGapIdeal), var(--headerGapMax));
 
   --logo-width: clamp(var(--logoWidthMin), var(--logoWidthIdeal), var(--logoWidthMax));
 
@@ -116,8 +139,8 @@
   --heading-margin-block: min(var(--siteGapMin), var(--siteGapMax));
   --heading-margin-inline: var(--centeringMargin);
 
-  --beers-columns: repeat(auto-fit, minmax(min(100%, 15.75rem), 1fr));
-  --beers-gap: clamp(1rem, 1.5873015873vw, 1.5rem);
+  --beers-columns: repeat(var(--beersTrackCount), minmax(var(--beersTrackSizeMin), var(--beersTrackSizeMax)));
+  --beers-gap: clamp(var(--beerGapMin), var(--beerGapIdeal), var(--beerGapMax));
 
   --beer-card-gap: var(--gap-II);
   --beer-card-padding: var(--gap-II);
@@ -132,13 +155,17 @@
   --contacts-margin: var(--content-margin);
   --contacts-padding: var(--gap-V);
 
-  --contacts-address-width: 100%;
+  --contacts-address-width: var(--fullWidth);
 
-  --events-columns: repeat(auto-fit, minmax(min(100%, 15.75rem), 1fr));
+  --events-columns: var(--beers-columns);
   --events-gap: var(--gap-II);
 
   --event-card-gap: var(--gap-III);
   --event-card-padding: var(--gap-II);
+
+  --event-card-img-width: var(--eventImgWidth);
+  --event-card-description-width: var(--eventDescriptionWidth);
+  --event-card-name-margin: var(--gap-I);
 
   /* Layout | Semantic */
   --content-margin: var(--centeringMargin);
@@ -175,6 +202,9 @@
   --event-card-layout: flex;
   --event-card-wrap: wrap;
   --event-card-align-content: flex-start;
+  --event-card-img-grow: 1;
+  --event-card-description-grow: 1;
+  --event-card-display: block;
 
   /* Cursor | Semantic */
   --link-cursor: pointer;
