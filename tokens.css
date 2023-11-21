@@ -39,6 +39,8 @@
   --textLetterSpacing: 0.012em;
   --textOverflowWrap: break-word;
 
+  --oxygenNumberFontSize: calc(40 / 52 * 1em);
+
   /* Sizing | Primitive */
   --outlineOnFocus: calc(6 / 16 * 1rem);
   --shadowOnFocus: calc(8 / 16 * 1rem);
@@ -73,6 +75,8 @@
   --siteGapMin: 3.25rem;
   --siteGapMax: 5.7777777778vw;
 
+  --oxygenLeft: calc(4 / 50 * 1em);
+
   --beerTrackWidth: calc(252 / 16 * 1rem);
   --beersTrackSizeMin: min(var(--fullWidth), var(--beerTrackWidth));
   --beersTrackSizeMax: 1fr;
@@ -85,6 +89,9 @@
   /* Layout | Primitive */
   --centeringMargin: auto;
   --beersTrackCount: auto-fit;
+
+  /* Position | Primitive */
+  --oxygenPosition: relative;
 
   /* Colors | Semantic */
   --colorPrimary: var(--black);
@@ -109,6 +116,8 @@
   --heading-font-weight: var(--fontWeightMax);
   --heading-font-size: clamp(var(--headingSizeMin), var(--headingSizeIdeal), var(--headingSizeMax));
   --heading-text-align: center;
+
+  --oxygen-number-font-size: var(--oxygenNumberFontSize);
 
   --beer-description-smaller-font-size: var(--textSizeMin);
 
@@ -138,6 +147,10 @@
   --heading-width: var(--headingWidth);
   --heading-margin-block: min(var(--siteGapMin), var(--siteGapMax));
   --heading-margin-inline: var(--centeringMargin);
+
+  --oxygen-left: var(--oxygenLeft);
+  --oxygen-number-bottom: calc(-13.6 / 40 * 1em);
+  --oxygen-number-left: calc(-4.4 / 40 * 1em);
 
   --beers-columns: repeat(var(--beersTrackCount), minmax(var(--beersTrackSizeMin), var(--beersTrackSizeMax)));
   --beers-gap: clamp(var(--beerGapMin), var(--beerGapIdeal), var(--beerGapMax));
@@ -205,6 +218,10 @@
   --event-card-img-grow: 1;
   --event-card-description-grow: 1;
   --event-card-display: block;
+
+  /* Position | Semantic */
+  --oxygen-position: var(--oxygenPosition);
+  --oxygen-number-position: var(--oxygenPosition);
 
   /* Cursor | Semantic */
   --link-cursor: pointer;

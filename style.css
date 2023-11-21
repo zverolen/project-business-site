@@ -111,6 +111,20 @@
     gap: var(--nav-gap);
   }
 
+  .oxygen {
+    position: var(--oxygen-position);
+    left: var(--oxygen-left);
+  }
+  
+  .oxygen span {
+    position: var(--oxygen-number-position);
+    
+    bottom: var(--oxygen-number-bottom);
+    left: var(--oxygen-number-left);
+  
+    font-size: var(--oxygen-number-font-size);
+  }
+
   #beers ul {
     display: var(--beers-layout);
     grid-template-columns: var(--beers-columns);
