@@ -30,21 +30,78 @@
 
       --footer-text-color: var(--colorAccent);
     }
+
+    body {
+      --text-color: var(--site-text-color);
+      --background-color: var(--site-background-color)
+    }
+
+    header {
+      --text-color: var(--site-background-color);
+      --background-color: var(--site-text-color);
+    }
+
+    #beers li {
+      --background-color: var(--default-card-background-color);
+      --border-color: var(--site-background-color);
+    }
+
+    #contact > div {
+      --background-color: var(--default-card-background-color);
+      --border-color: var(--site-background-color);
+    }
+
+    #events li {
+      --text-color: var(--site-text-color);
+      --background-color: var(--accent-card-background-color);
+    }
+
+    footer {
+      --text-color: var(--accent-card-background-color);
+      --background-color: var(--site-text-color);
+      --border-color: var(--site-background-color);
+    }
   }
 }
 
 @media (prefers-color-scheme: dark) {
   @layer theme.dark {
     :root {
-      --text-color: var(--colorPrimaryInverted);
-      --background-color: var(--colorPrimary);
-      --disabled-background-color: var(--colorDisabledDark);
-      --disabled-text-color: var(--colorDisabledMedium);
+      --site-text-color: var(--colorPrimaryInverted);
+      --site-background-color: var(--colorSecondaryInverted);
 
-      --correct-text-color: var(--colorSuccessDarkTheme);
-      --correct-background-color: var(--background-color);
-      --wrong-text-color: var(--colorErrorDarkTheme);
-      --wrong-background-color: var(--background-color);
+      --accent-card-background-color: var(--colorAccent);
+    }
+
+    body {
+      --text-color: var(--site-text-color);
+      --background-color: var(--site-background-color)
+    }
+
+    header {
+      --text-color: var(--site-text-color);
+      --background-color: var(--site-background-color);
+    }
+
+    #beers li {
+      --background-color: var(--site-background-color);
+      --border-color: var(--site-text-color);
+    }
+
+    #contact > div {
+      --background-color: var(--site-background-color);
+      --border-color: var(--site-text-color);
+    }
+
+    #events li {
+      --text-color: var(--site-background-color);
+      --background-color: var(--accent-card-background-color);
+    }
+
+    footer {
+      --text-color: var(--site-text-color);
+      --background-color: var(--site-background-color);
+      --border-color: var(--site-text-color);
     }
   }
 }
@@ -55,12 +112,13 @@
     font-size: var(--text-font-size);
     line-height: var(--text-line-height);
     letter-spacing: var(--text-letter-spacing);
-    /* word-spacing: 0.016em; */
     overflow-wrap: var(--text-overflow-wrap);
     hyphens: var(--text-hyphens);
 
-    color: var(--site-text-color);
-    background-color: var(--site-background-color);
+    /* color: var(--site-text-color);
+    background-color: var(--site-background-color); */
+    color: var(--text-color);
+    background-color: var(--background-color);
   }
 
   h2, h3, h4 {
@@ -78,6 +136,15 @@
     font-size: var(--subheading-font-size);
   }
 
+  a {
+    color: var(--text-color);
+    background-color: var(--background-color);
+
+    /* For transtion */
+    outline: var(--outlineOnFocus) solid var(--background-color);
+    transition: box-shadow 0.3s ease-out;
+  }
+
   section:not(:first-of-type):not(:nth-of-type(3)) {
     width: var(--content-width);
     margin-inline: var(--content-margin);
@@ -86,8 +153,8 @@
   header {
     font-size: var(--header-font-size);
 
-    color: var(--header-text-color);
-    background-color: var(--header-background-color);
+    color: var(--text-color);
+    background-color: var(--background-color);
   }
 
   header > div {
@@ -139,7 +206,9 @@
 
     padding: var(--beer-card-padding);
 
-    background-color: var(--default-card-background-color);
+    background-color: var(--background-color);
+
+    border: 1px solid var(--border-color);
   }
 
   #beers li > div:first-child {
@@ -166,7 +235,9 @@
   }
 
   #contact > div {
-    background-color: var(--default-card-background-color);
+    /* background-color: var(--default-card-background-color); */
+    background-color: var(--background-color);
+    border-bottom: 1px solid var(--border-color);
   }
 
   #contact > div > div {
@@ -220,7 +291,9 @@
 
     padding: var(--event-card-padding);
     
-    background-color: var(--accent-card-background-color);  
+    /* background-color: var(--accent-card-background-color); */
+    color: var(--text-color);
+    background-color: var(--background-color); 
   }
 
   @container event-card (max-width: 300px) {
@@ -254,8 +327,13 @@
 
   footer {
     padding-block: var(--footer-padding);
-    color: var(--footer-text-color);
-    background-color: var(--header-background-color);
+
+    /* color: var(--footer-text-color);
+    background-color: var(--header-background-color); */
+    color: var(--text-color);
+    background-color: var(--background-color);
+
+    border-top: 1px solid var(--border-color);
   }
 
   footer > div {
@@ -280,5 +358,7 @@
   a:hover, a:focus-visible {
     outline: var(--outlineOnFocus) solid var(--header-background-color);
     box-shadow: 0 0 0 var(--shadowOnFocus) var(--header-text-color);
+
+    /* transition: box-shadow 0.3s ease-out; */
   }
 }
