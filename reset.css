@@ -51,6 +51,10 @@ textarea:not([rows]) {
   min-height: 10em;
 }
 
+div:has(img:only-child) {
+  overflow: hidden;
+}
+
 img {
   display: block;
   width: 100%;
@@ -67,4 +71,10 @@ img {
 
 :focus-visible {
   outline-offset: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
