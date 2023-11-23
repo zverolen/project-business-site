@@ -121,11 +121,11 @@
     background-color: var(--background-color);
   }
 
-  h2, h3, h4 {
+  h1, h2, h3, h4 {
     text-transform: var(--heading-text-transform);
   }
 
-  h2:not(footer h2) {
+  h2:not(footer h2), h1 {
     margin-block:var(--heading-margin-block);
 
     font-size: var(--heading-font-size);

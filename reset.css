@@ -69,6 +69,7 @@ img {
   display: inline-block;
 }
 
+/* To prevent a line around focused items */
 :focus-visible {
   outline-offset: 0;
 }
