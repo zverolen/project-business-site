@@ -31,7 +31,7 @@
   --fontWeightMin: 400;
   --fontWeightMax: 600;
 
-  --lineHeightBig: 1.4;
+  --lineHeightBig: 1.5;
   --lineHeightSmall: 1.1;
   --lineHeightSmallLargeFont: 0.9;
   --lineHeightReset: normal;
@@ -80,8 +80,8 @@
   --beerTrackWidth: calc(252 / 16 * 1rem);
   --beersTrackSizeMin: min(var(--fullWidth), var(--beerTrackWidth));
   --beersTrackSizeMax: 1fr;
-  --beerDescriptionGapMin: calc(8 / 16 * 1rem);
-  --beerDescriptionGapMax: 0.8888888889vw;
+  --beerDescriptionGapMin: calc(16 / 16 * 1rem);
+  --beerDescriptionGapMax: 1.7vw;
 
   --eventImgWidth: calc(120 / 16 * 1rem);
   --eventDescriptionWidth: calc(200 / 16 * 1rem);
@@ -126,11 +126,6 @@
 
   --event-card-smaller-font-size: var(--textSizeMin);
   --event-card-date-font-style: italic;
-  --event-card-margin: var(--gap-I);
-
-  --footer-padding: var(--gap-III) var(--gap-III);
-  --footer-heading-margin: var(--gap-I);
-  --footer-link-margin: var(--gap-I);
 
   /* Sizing | Semantic */
   --content-width: min(var(--contentWidthMin), var(--contentWidthMax));
@@ -148,6 +143,8 @@
   --heading-margin-block: min(var(--siteGapMin), var(--siteGapMax));
   --heading-margin-inline: var(--centeringMargin);
 
+  --subheading-margin-bottom: var(--gap-I);
+
   --oxygen-left: var(--oxygenLeft);
   --oxygen-number-bottom: calc(-13.6 / 40 * 1em);
   --oxygen-number-left: calc(-4.4 / 40 * 1em);
@@ -158,12 +155,10 @@
   --beer-card-gap: var(--gap-II);
   --beer-card-padding: var(--gap-II);
   --beer-description-gap: min(var(--beerDescriptionGapMin), var(--beerDescriptionGapMax));
-  --beer-details-gap: var(--gap-0-I);
-
-  --events-margin-block-end: calc(var(--heading-margin-block) * 1.5);
+  --beer-details-gap: var(--gap-I);
 
   --contacts-column-gap: var(--gap-II);
-  --contacts-row-gap: var(--gap-IV);
+  --contacts-row-gap: var(--gap-V);
   --contacts-width: var(--content-width);
   --contacts-margin: var(--content-margin);
   --contacts-padding: var(--gap-V);
@@ -175,10 +170,16 @@
 
   --event-card-gap: var(--gap-III);
   --event-card-padding: var(--gap-II);
+  --event-card-margin: var(--gap-I);
+  --events-margin-block-end: calc(var(--heading-margin-block) * 1.5);
 
   --event-card-img-width: var(--eventImgWidth);
   --event-card-description-width: var(--eventDescriptionWidth);
   --event-card-name-margin: var(--gap-I);
+  --event-card-date-margin: var(--gap-I);
+
+  --footer-padding: var(--gap-III) var(--gap-III);
+  --footer-link-margin: var(--gap-I);
 
   /* Layout | Semantic */
   --content-margin: var(--centeringMargin);

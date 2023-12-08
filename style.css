@@ -134,15 +134,18 @@
 
   h3, footer h2 {
     font-size: var(--subheading-font-size);
+    margin-block-end: var(--subheading-margin-bottom);
   }
 
   a {
-    /* color: var(--text-color);
-    background-color: var(--background-color); */
-
     /* For transtion */
     outline: var(--outlineOnFocus) solid var(--background-color);
-    transition: box-shadow 0.3s ease-out;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    a {
+      transition: box-shadow 0.3s ease-out;
+    }
   }
 
   section:not(:first-of-type):not(:nth-of-type(3)) {
@@ -317,6 +320,7 @@
   }
 
   #events h3 + div {
+    margin-block-end: var(--event-card-date-margin);
     font-style: var(--event-card-date-font-style);
   }
 
@@ -337,10 +341,6 @@
   footer > div {
     width: var(--content-width);
     margin-inline: var(--content-margin);
-  }
-
-  footer h2 {
-    margin-block-end: var(--footer-heading-margin);
   }
 
   footer a {
