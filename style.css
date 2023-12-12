@@ -134,10 +134,18 @@
 
   h3, footer h2 {
     font-size: var(--subheading-font-size);
+  }
+
+  h3 {
     margin-block-end: var(--subheading-margin-bottom);
   }
 
+  footer h2 {
+    margin-block-end: var(--footer-subheading-margin-bottom);
+  }
+
   a {
+    padding-block: var(--link-vertical-padding);
     /* For transtion */
     outline: var(--outlineOnFocus) solid var(--background-color);
   }
@@ -262,8 +270,11 @@
     text-align: var(--contacts-address-text-align);
   }
 
+  #contact > div > div > div:nth-child(1) h3 {
+    margin-block-end: var(--contact-address-heading-margin-bottom);
+  }
+
   #contact > div > div > div:nth-child(1) p {
-    /* font-weight: var(--heading-font-weight); */
     display: var(--contacts-address-display);
     text-transform: var(--contacts-address-text-transform);
   }
@@ -344,6 +355,7 @@
   }
 
   footer a {
+    display: var(--footer-link-display);
     margin-inline-end: var(--footer-link-margin);
   }
 }
@@ -354,6 +366,8 @@
   }
 
   a:hover, a:focus-visible {
+    position: relative;
+
     outline: var(--outlineOnFocus) solid var(--background-color);
     box-shadow: 0 0 0 var(--shadowOnFocus) var(--text-color);
 

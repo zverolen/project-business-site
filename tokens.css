@@ -55,6 +55,8 @@
   --contentWidthMin: 1280 / 16 * 1rem;
   --contentWidthMax: 100vw - 2rem;
 
+  --linkAdditionalPadding: calc(10 / 16 * 1rem);
+
   --headerGapMin: var(--gap-II);
   --headerGapIdeal: 1.5873015873vw;
   --headerGapMax: calc(24 / 16 * 1rem);
@@ -82,6 +84,8 @@
   --beersTrackSizeMax: 1fr;
   --beerDescriptionGapMin: calc(16 / 16 * 1rem);
   --beerDescriptionGapMax: 1.7vw;
+
+  --contactAddressHeadingMargin: calc(18 / 16 * 1rem);
 
   --eventImgWidth: calc(120 / 16 * 1rem);
   --eventDescriptionWidth: calc(200 / 16 * 1rem);
@@ -130,6 +134,8 @@
   /* Sizing | Semantic */
   --content-width: min(var(--contentWidthMin), var(--contentWidthMax));
 
+  --link-vertical-padding: var(--linkAdditionalPadding);
+
   --header-width: var(--content-width);
   --header-margin: var(--content-margin);
   --header-padding: var(--gap-II);
@@ -164,6 +170,7 @@
   --contacts-padding: var(--gap-V);
 
   --contacts-address-width: var(--fullWidth);
+  --contact-address-heading-margin-bottom: var(--contactAddressHeadingMargin);
 
   --events-columns: var(--beers-columns);
   --events-gap: var(--gap-II);
@@ -178,6 +185,7 @@
   --event-card-name-margin: var(--gap-I);
   --event-card-date-margin: var(--gap-I);
 
+  --footer-subheading-margin-bottom: var(--gap-II);
   --footer-padding: var(--gap-III) var(--gap-III);
   --footer-link-margin: var(--gap-I);
 
@@ -219,6 +227,8 @@
   --event-card-img-grow: 1;
   --event-card-description-grow: 1;
   --event-card-display: block;
+
+  --footer-link-display: inline-block;
 
   /* Position | Semantic */
   --oxygen-position: var(--oxygenPosition);
