@@ -55,15 +55,15 @@
   --contentWidthMin: 1280 / 16 * 1rem;
   --contentWidthMax: 100vw - 2rem;
 
-  --linkAdditionalPadding: calc(10 / 16 * 1rem);
+  --linkAdditionalPadding: calc(9 / 16 * 1rem);
 
-  --headerGapMin: var(--gap-II);
+  --headerGapMin: var(--gap-I);
   --headerGapIdeal: 1.5873015873vw;
   --headerGapMax: calc(24 / 16 * 1rem);
 
   --logoWidthMin: min(100%, 180 / 16 * 1rem);
   --logoWidthMax: 75vw;
-  --logoWidthIdeal: min(40vw, 360 / 16 * 1rem);
+  --logoWidthIdeal: min(60vw, 360 / 16 * 1rem);
 
   --navGapMin: var(--gap-I);
   --navGapIdeal: var(--headerGapIdeal);
@@ -74,8 +74,9 @@
   --beerGapMax: calc(24 / 16 * 1rem);
 
   --headingWidth: 90%;
-  --siteGapMin: 3.25rem;
-  --siteGapMax: 5.7777777778vw;
+
+  --siteGapMin: calc(52 / 16 * 1rem);
+  --siteGapMax: 10vw;
 
   --oxygenLeft: calc(4 / 50 * 1em);
 
@@ -96,6 +97,9 @@
 
   /* Position | Primitive */
   --oxygenPosition: relative;
+
+  /* Transition | Primitive */
+  --speed: 0.1s;
 
   /* Colors | Semantic */
   --colorPrimary: var(--black);
@@ -138,7 +142,7 @@
 
   --header-width: var(--content-width);
   --header-margin: var(--content-margin);
-  --header-padding: var(--gap-II);
+  --header-padding: var(--gap-II) var(--gap-I);
   --header-gap: clamp(var(--headerGapMin), var(--headerGapIdeal), var(--headerGapMax));
 
   --logo-width: clamp(var(--logoWidthMin), var(--logoWidthIdeal), var(--logoWidthMax));
@@ -186,7 +190,7 @@
   --event-card-date-margin: var(--gap-I);
 
   --footer-subheading-margin-bottom: var(--gap-II);
-  --footer-padding: var(--gap-III) var(--gap-III);
+  --footer-padding: var(--gap-V);
   --footer-link-margin: var(--gap-I);
 
   /* Layout | Semantic */
@@ -236,4 +240,7 @@
 
   /* Cursor | Semantic */
   --link-cursor: pointer;
+
+  /* Transition | Semantic */
+  --common-transition: box-shadow var(--speed) ease-out;
 }

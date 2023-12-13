@@ -115,8 +115,6 @@
     overflow-wrap: var(--text-overflow-wrap);
     hyphens: var(--text-hyphens);
 
-    /* color: var(--site-text-color);
-    background-color: var(--site-background-color); */
     color: var(--text-color);
     background-color: var(--background-color);
   }
@@ -126,7 +124,9 @@
   }
 
   h2:not(footer h2), h1 {
+    max-width: var(--heading-width);
     margin-block:var(--heading-margin-block);
+    margin-inline: var(--heading-margin-inline);
 
     font-size: var(--heading-font-size);
     text-align: var(--heading-text-align);
@@ -152,7 +152,7 @@
 
   @media (prefers-reduced-motion: no-preference) {
     a {
-      transition: box-shadow 0.3s ease-out;
+      transition: var(--common-transition);
     }
   }
 
@@ -370,7 +370,5 @@
 
     outline: var(--outlineOnFocus) solid var(--background-color);
     box-shadow: 0 0 0 var(--shadowOnFocus) var(--text-color);
-
-    /* transition: box-shadow 0.3s ease-out; */
   }
 }
