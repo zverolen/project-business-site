@@ -99,7 +99,9 @@
   --oxygenPosition: relative;
 
   /* Transition | Primitive */
-  --speed: 0.1s;
+  --speed-I: 0.1s;
+  --speed-II: 0.3s;
+  --speed-0: 0s;
 
   /* Colors | Semantic */
   --colorPrimary: var(--black);
@@ -242,5 +244,6 @@
   --link-cursor: pointer;
 
   /* Transition | Semantic */
-  --common-transition: box-shadow var(--speed) ease-out;
+  --common-transition: box-shadow var(--speed-II) ease-out;
+  --fast-transition: box-shadow var(--speed-I) ease-out;
 }

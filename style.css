@@ -146,6 +146,7 @@
 
   a {
     padding-block: var(--link-vertical-padding);
+
     /* For transtion */
     outline: var(--outlineOnFocus) solid var(--background-color);
   }
@@ -153,6 +154,10 @@
   @media (prefers-reduced-motion: no-preference) {
     a {
       transition: var(--common-transition);
+    }
+
+    header a, footer a {
+      transition-duration: var(--speed-0);
     }
   }
 
@@ -246,14 +251,12 @@
   }
 
   #contact > div {
-    /* background-color: var(--default-card-background-color); */
     background-color: var(--background-color);
     border-bottom: 1px solid var(--border-color);
   }
 
   #contact > div > div {
     display: var(--contacts-layout);
-    /* justify-content: space-between; */
     justify-content: var(--contacts-justify-content);
     flex-wrap: var(--contacts-flex-wrap);
     column-gap: var(--contacts-column-gap);
@@ -305,7 +308,6 @@
 
     padding: var(--event-card-padding);
     
-    /* background-color: var(--accent-card-background-color); */
     color: var(--text-color);
     background-color: var(--background-color); 
   }
@@ -370,5 +372,9 @@
 
     outline: var(--outlineOnFocus) solid var(--background-color);
     box-shadow: 0 0 0 var(--shadowOnFocus) var(--text-color);
+  }
+
+  footer a:hover, header a:hover, footer a:focus-visible, header a:focus-visible {
+    transition-duration: var(--speed-II);
   }
 }
