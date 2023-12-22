@@ -1,16 +1,16 @@
 # Website of a Craft Beer Brewery 
 *Student Project on Codecademy (a website for a company)*
 
-This project is a solution to a task at the Codecademy's Courses: to create a responsive website for a company using flexbox. 
+This project is a solution for a task in Codecademy's courses: creating a responsive website for a company using flexbox.
 
-## Сharacteristics
+## Characteristics
 1. Designed in the browser.
 2. Complies with WCAG 2.2 success criteria, level AA, except for 1.4.12 (increased word spacing). The audit is included at the end of the file.
 3. Screen readers-friendly.
 4. Features responsive images using Cloudinary techniques.
 5. Imagery created in Figma using photos from photo libraries (credits included).
 
-## Compliance with the WCAG 2.2 success criteria:
+## Compliance with WCAG 2.2 success criteria:
 - [x] 1.1.1 Non-text Content (A)
 - [x] 1.2.1 Audio-only and Video-only (Prerecorded) (A) (not present)
 - [x] 1.2.2 Captions (Prerecorded) (A) (not present)
@@ -34,11 +34,11 @@ This project is a solution to a task at the Codecademy's Courses: to create a re
 - [x] 1.4.5 Images of Text (AA)
 - [ ] 1.4.6 Contrast (Enhanced) (AAA)
 - [x] 1.4.7 Low or No Background Audio (AAA) (not present)
-- [x] 1.4.8 Visual Presentation (AAA) (Color tested in Firefox, everything else verified too)
+- [x] 1.4.8 Visual Presentation (AAA) (Colors tested in Firefox, and all other concerns have been verified as well.)
 - [x] 1.4.9 Images of Text (No Exception) (AAA)
 - [x] 1.4.10 Reflow (AA)
 - [x] 1.4.11 Non-text Contrast (AA)
-- [ ] 1.4.12 Text Spacing (AA) (The default word spacing is used because increasing it makes the text lines fall apart: there are a lot of short lines and no long lines of text)
+- [ ] 1.4.12 Text Spacing (AA) (The default word spacing is applied because increasing it causes the text lines to break apart: there are numerous short lines and no long lines of text)
 - [x] 1.4.13 Content on Hover or Focus (AA) (not present)
 - [x] 2.1.1 Keyboard (A)
 - [x] 2.1.2 No Keyboard Trap (A)
@@ -76,9 +76,9 @@ This project is a solution to a task at the Codecademy's Courses: to create a re
 - [x] 2.5.8 Target Size (Minimum) (AA)
 - [x] 3.1.1 Language of Page (A)
 - [x] 3.1.2 Language of Parts (AA)
-- [ ] 3.1.3 Unusual Words (AAA) (Beer styles are not explained)
+- [ ] 3.1.3 Unusual Words (AAA) (The beer styles are not explained)
 - [ ] 3.1.4 Abbreviations (AAA) (Abbreviations are not explained)
-- [x] 3.1.5 Reading Level (AAA) (To my knowledge, the text  is not more advanced than the level of a lower secondary education)
+- [x] 3.1.5 Reading Level (AAA) (To the best of my knowledge, the text is not more advanced than the level of lower secondary education)
 - [x] 3.1.6 Pronunciation (AAA) (not present)
 - [x] 3.2.1 On Focus (A)
 - [x] 3.2.2 On Input (A) (not present)
