@@ -52,8 +52,8 @@
   --gap-IV: calc(32 /  16 * 1rem);
   --gap-V: calc(48 / 16 * 1rem);
 
-  --contentWidthMin: 1280 / 16 * 1rem;
-  --contentWidthMax: 100vw - 2rem;
+  --contentWidthAbs: 1280 / 16 * 1rem;
+  --contentWidthRel: 100vw - 2rem;
 
   --linkAdditionalPadding: calc(9 / 16 * 1rem);
 
@@ -75,8 +75,8 @@
 
   --headingWidth: 90%;
 
-  --siteGapMin: calc(52 / 16 * 1rem);
-  --siteGapMax: 10vw;
+  --siteGapAbs: calc(52 / 16 * 1rem);
+  --siteGapRel: 10vw;
 
   --oxygenLeft: calc(4 / 50 * 1em);
 
@@ -138,7 +138,7 @@
   --event-card-date-font-style: italic;
 
   /* Sizing | Semantic */
-  --content-width: min(var(--contentWidthMin), var(--contentWidthMax));
+  --content-width: min(var(--contentWidthAbs), var(--contentWidthRel));
 
   --link-vertical-padding: var(--linkAdditionalPadding);
 
@@ -152,7 +152,7 @@
   --nav-gap: clamp(var(--navGapMin), var(--navGapIdeal), var(--navGapMax));
 
   --heading-width: var(--headingWidth);
-  --heading-margin-block: min(var(--siteGapMin), var(--siteGapMax));
+  --heading-margin-block: min(var(--siteGapAbs), var(--siteGapRel));
   --heading-margin-inline: var(--centeringMargin);
 
   --subheading-margin-bottom: var(--gap-I);
