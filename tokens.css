@@ -44,6 +44,7 @@
   /* Sizing | Primitive */
   --outlineOnFocus: calc(4 / 16 * 1rem);
   --shadowOnFocus: calc(6 / 16 * 1rem);
+  --borderWidth: calc(1 / 16 * 1rem);
 
   --gap-0-I: calc(4 / 16 * 1rem);
   --gap-I: calc(8 / 16 * 1rem);

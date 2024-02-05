@@ -224,7 +224,7 @@
 
     background-color: var(--background-color);
 
-    border: 1px solid var(--border-color);
+    border: var(--borderWidth) solid var(--border-color);
   }
 
   #beers li > div:first-child {
@@ -234,7 +234,7 @@
     gap: var(--beer-description-gap);
   }
 
-  @container (max-width: 300px) {
+  @container (max-width: calc(300 / 16 * 1rem)) {
     #beers li > div:first-child {
       font-size: var(--beer-description-smaller-font-size);
     }
@@ -252,7 +252,7 @@
 
   #contact > div {
     background-color: var(--background-color);
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: var(--borderWidth) solid var(--border-color);
   }
 
   #contact > div > div {
@@ -312,7 +312,7 @@
     background-color: var(--background-color); 
   }
 
-  @container event-card (max-width: 300px) {
+  @container event-card (max-width: calc(300 / 16 * 1rem)) {
     #events li > div {
       font-size: var(--event-card-smaller-font-size);
     }
@@ -348,7 +348,7 @@
     color: var(--text-color);
     background-color: var(--background-color);
 
-    border-top: 1px solid var(--border-color);
+    border-top: var(--borderWidth) solid var(--border-color);
   }
 
   footer > div {
