@@ -6,8 +6,8 @@ This project is a solution for a task in Codecademy's courses: creating a respon
 ## Characteristics
 1. Designed in the browser.
 2. Complies with WCAG 2.2 success criteria, level AA, except for 1.4.12 (increased word spacing). The audit is included at the end of the file.
-3. Screen readers-friendly.
-4. Features responsive images using Cloudinary techniques.
+3. Tested with screen readers.
+4. Features responsive images with help of [Responsive Breakpoints](https://www.responsivebreakpoints.com/).
 5. Imagery created in Figma using photos from photo libraries (credits included).
 
 ## Compliance with WCAG 2.2 success criteria:
