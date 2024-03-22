@@ -1,6 +1,7 @@
 # Website of a Craft Beer Brewery 
 [Open in browser]
 (https://zverolen.github.io/o2/o2)
+
 *Student Project on Codecademy (a website for a company)*
 
 This project is a solution for a task in Codecademy's courses: creating a responsive website for a company using flexbox.
